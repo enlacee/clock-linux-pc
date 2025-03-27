@@ -19,14 +19,20 @@ Reference: two years old ago i had a watch  that sound a beep each hours in this
 	
 ## Execute in your terminal
 
-    cmod +x script.sh
+    chmod +x script.sh
     ./script.sh
     
 ## Execute or add in crontab enviroment
+Ech hour or minute if you need it:
 
     crontab -e
-    0 * * * * ./script.sh
+    0 * * * * <path-abosolut>./script.sh ## each hour
+    * * * * * <path-abosolut>./script.sh ## each minute
     
+Put with log:
+
+    0 * * * * <path-abosolute>/script.sh >> <path-abosolute>/log.txt
+
 Explanation: (the last code run each hour)
 
 - `0`: Runs at minute 0 (exactly at the start of each hour).

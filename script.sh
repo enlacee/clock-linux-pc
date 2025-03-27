@@ -1,8 +1,9 @@
 #!/bin/bash
+echo "=============================="
+echo "Executing each 1 hour The beep"
+echo "=============================="
 
-#
-# Simple scripting beep by Anibal
-#
+# Note: It's required put the absolute path for this clock work!
 
-echo "Executing each 1 hour by Anibal"
-play ./beep.mp3
+play /home/anb/sites/anibal/local.anibalcopitan.com/projects/clock-linux-pc/beep.mp3
+
