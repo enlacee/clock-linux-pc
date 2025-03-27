@@ -28,6 +28,7 @@ Ech hour or minute if you need it:
     crontab -e
     0 * * * * <path-abosolut>./script.sh ## each hour
     * * * * * <path-abosolut>./script.sh ## each minute
+    */10 * * * * <path-abosolut>./script.sh ## each 10 minutes
     
 Put with log:
 
@@ -38,8 +39,22 @@ Explanation: (the last code run each hour)
 - `0`: Runs at minute 0 (exactly at the start of each hour).
 - `* * * *` Runs every hour, every day.
 
+## Check crontab if is necessary
+
+	sudo pacman -S cronie
+	sudo systemctl enable cronie
+	sudo systemctl start cronie
+	systemctl status cronie
+
 
 ## Project Image
 
+Test of the script
+
 ![beet watch timer](./README/Screenshot_20250326_195519.png)
+
+Checking if crontab is working:
+
+![check crontab](./README/Screenshot_20250326_204330.png)
+
 
